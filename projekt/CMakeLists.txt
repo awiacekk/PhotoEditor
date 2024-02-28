@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.17)
+project(untitled1)
+
+set(CMAKE_CXX_STANDARD 14)
+set(OpenCV_DIR "C:/Users/alla/Documents/opencv/build")
+find_package(OpenCV REQUIRED COMPONENTS core imgproc highgui imgcodecs)
+include_directories(${OpenCV_INCLUDE_DIRS})
+add_executable(unititled1 main.cpp GetFilenameToSave.h OpenFileDialog.h)
+target_link_libraries(unititled1 ${OpenCV_LIBS})
+find_package(SFML 2.5 COMPONENTS system window graphics)
+target_link_libraries(unititled1 sfml-system sfml-window sfml-graphics)
